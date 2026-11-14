@@ -1,8 +1,8 @@
-﻿using GymCoreProject.Models;
+﻿using GymManagement.DAL.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace GymCoreProject.Configurations
+namespace GymManagement.DAL.Data.Configurations
 {
     public class PlanConfiguration : IEntityTypeConfiguration<Plan>
     {
@@ -20,6 +20,8 @@ namespace GymCoreProject.Configurations
 
             builder.Property(x => x.CreatedAt)
                 .HasDefaultValueSql("GETDATE()");
+            //Duration Days From 1 To 365
+            builder.ToTable(tb => tb.HasCheckConstraint("CK_Plan_DurationDays", "DurationDays between 1 and 365"));
 
         }
     }
