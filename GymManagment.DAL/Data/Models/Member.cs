@@ -8,7 +8,7 @@ namespace GymManagement.DAL.Data.Models
 {
     public class Member : GymUser
     {
-        public string Photo { get; set; }
+        public string? Photo { get; set; }
 
         //JoinDate => CreatedAt from BaseEntity
         //public DateOnly JoinDate { get; set; }

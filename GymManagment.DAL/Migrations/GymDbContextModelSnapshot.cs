@@ -181,7 +181,6 @@ namespace GymManagement.DAL.Migrations
                         .HasColumnType("varchar");
 
                     b.Property<string>("Photo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("UpdatedAt")
@@ -436,9 +435,8 @@ namespace GymManagement.DAL.Migrations
                             b1.Property<int>("MemberId")
                                 .HasColumnType("int");
 
-                            b1.Property<string>("BuildingNumber")
-                                .IsRequired()
-                                .HasColumnType("nvarchar(max)");
+                            b1.Property<int>("BuildingNumber")
+                                .HasColumnType("int");
 
                             b1.Property<string>("City")
                                 .IsRequired()
@@ -490,9 +488,8 @@ namespace GymManagement.DAL.Migrations
                             b1.Property<int>("PlanId")
                                 .HasColumnType("int");
 
-                            b1.Property<string>("BuildingNumber")
-                                .IsRequired()
-                                .HasColumnType("nvarchar(max)");
+                            b1.Property<int>("BuildingNumber")
+                                .HasColumnType("int");
 
                             b1.Property<string>("City")
                                 .IsRequired()
@@ -540,9 +537,8 @@ namespace GymManagement.DAL.Migrations
                             b1.Property<int>("TrainerId")
                                 .HasColumnType("int");
 
-                            b1.Property<string>("BuildingNumber")
-                                .IsRequired()
-                                .HasColumnType("nvarchar(max)");
+                            b1.Property<int>("BuildingNumber")
+                                .HasColumnType("int");
 
                             b1.Property<string>("City")
                                 .IsRequired()
